@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Toneelstuk</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- Floating Clouds -->
+    <div class="floating-clouds">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="page-header">
+        <div class="container">
+            <button class="back-btn" onclick="history.back()" data-cursor-hover>
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </button>
+            <h1>Gallery</h1>
+        </div>
+    </div>
+
+    <!-- Gallery Page -->
+    <div class="gallery-page">
+        <div class="container">
+            <div class="gallery-grid-large">
+                <div class="gallery-item-large" data-cursor-hover onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1507924538820-ede94a04019d?w=800&h=600&fit=crop" alt="The Digital Odyssey - Opening Night">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>The Digital Odyssey - Opening Night</h4>
+                            <span class="gallery-category">Performance</span>
+                        </div>
+                    </div>
+                    <span class="category-badge">Performance</span>
+                </div>
+
+                <div class="gallery-item-large" data-cursor-hover onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=600&fit=crop" alt="Behind the Scenes - Rehearsal">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Behind the Scenes - Rehearsal</h4>
+                            <span class="gallery-category">Rehearsal</span>
+                        </div>
+                    </div>
+                    <span class="category-badge">Rehearsal</span>
+                </div>
+
+                <div class="gallery-item-large" data-cursor-hover onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&h=600&fit=crop" alt="Metamorphosis - Character Study">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Metamorphosis - Character Study</h4>
+                            <span class="gallery-category">Performance</span>
+                        </div>
+                    </div>
+                    <span class="category-badge">Performance</span>
+                </div>
+
+                <div class="gallery-item-large" data-cursor-hover onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop" alt="Cast & Crew Celebration">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Cast & Crew Celebration</h4>
+                            <span class="gallery-category">Team</span>
+                        </div>
+                    </div>
+                    <span class="category-badge">Team</span>
+                </div>
+
+                <div class="gallery-item-large" data-cursor-hover onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=800&h=600&fit=crop" alt="Stage Design Workshop">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Stage Design Workshop</h4>
+                            <span class="gallery-category">Workshop</span>
+                        </div>
+                    </div>
+                    <span class="category-badge">Workshop</span>
+                </div>
+
+                <div class="gallery-item-large" data-cursor-hover onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop" alt="Echoes of Tomorrow - Final Scene">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Echoes of Tomorrow - Final Scene</h4>
+                            <span class="gallery-category">Performance</span>
+                        </div>
+                    </div>
+                    <span class="category-badge">Performance</span>
+                </div>
+
+                <div class="gallery-item-large" data-cursor-hover onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=800&h=600&fit=crop" alt="Costume Design Process">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Costume Design Process</h4>
+                            <span class="gallery-category">Design</span>
+                        </div>
+                    </div>
+                    <span class="category-badge">Design</span>
+                </div>
+
+                <div class="gallery-item-large" data-cursor-hover onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=600&fit=crop" alt="Audience Interaction Moment">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Audience Interaction Moment</h4>
+                            <span class="gallery-category">Performance</span>
+                        </div>
+                    </div>
+                    <span class="category-badge">Performance</span>
+                </div>
+
+                <div class="gallery-item-large" data-cursor-hover onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=600&fit=crop" alt="Technical Rehearsal">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h4>Technical Rehearsal</h4>
+                            <span class="gallery-category">Rehearsal</span>
+                        </div>
+                    </div>
+                    <span class="category-badge">Rehearsal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()" data-cursor-hover>
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightboxImage" src="/placeholder.svg" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const title = element.querySelector('h4').textContent;
+            
+            document.getElementById('lightboxImage').src = img.src;
+            document.getElementById('lightboxTitle').textContent = title;
+            document.getElementById('lightbox').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox on background click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
