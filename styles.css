@@ -14,6 +14,29 @@ body {
   min-height: 100vh;
 }
 
+/* Fullscreen black background */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Make video responsive */
+#loading-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Maintains 16:9 ratio with black bars if needed */
+}
+
 /* Futuristic Grid Background */
 body::before {
   content: "";
@@ -163,18 +186,22 @@ body::before {
     transform: translateX(0) translateY(0) scale(1);
     opacity: 0.3;
   }
+
   25% {
     transform: translateX(25vw) translateY(-20px) scale(1.1);
     opacity: 0.6;
   }
+
   50% {
     transform: translateX(50vw) translateY(20px) scale(0.9);
     opacity: 0.4;
   }
+
   75% {
     transform: translateX(75vw) translateY(-10px) scale(1.05);
     opacity: 0.5;
   }
+
   100% {
     transform: translateX(110vw) translateY(0) scale(1);
     opacity: 0.2;
@@ -203,17 +230,14 @@ body::before {
 .metallic-card {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 215, 0, 0.1) 0%,
-    rgba(255, 140, 0, 0.05) 25%,
-    rgba(255, 69, 0, 0.1) 50%,
-    rgba(255, 215, 0, 0.05) 75%,
-    rgba(255, 140, 0, 0.1) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 215, 0, 0.1) 0%,
+      rgba(255, 140, 0, 0.05) 25%,
+      rgba(255, 69, 0, 0.1) 50%,
+      rgba(255, 215, 0, 0.05) 75%,
+      rgba(255, 140, 0, 0.1) 100%);
   border: 2px solid rgba(255, 215, 0, 0.3);
-  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.1), inset 0 1px 0 rgba(255, 215, 0, 0.2), inset 0 -1px 0
-    rgba(255, 69, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.1), inset 0 1px 0 rgba(255, 215, 0, 0.2), inset 0 -1px 0 rgba(255, 69, 0, 0.1);
 }
 
 /* Ensure ALL content appears above shine effect */
@@ -278,10 +302,12 @@ body::before {
     transform: translateX(-100%) translateY(-100%) rotate(45deg);
     opacity: 0;
   }
+
   50% {
     transform: translateX(100%) translateY(100%) rotate(45deg);
     opacity: 1;
   }
+
   100% {
     transform: translateX(-100%) translateY(-100%) rotate(45deg);
     opacity: 0;
@@ -294,16 +320,20 @@ body::before {
 }
 
 @keyframes subtle-shake {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   25% {
     transform: translateX(-1px) rotate(-0.5deg);
   }
+
   50% {
     transform: translateX(1px) rotate(0.5deg);
   }
+
   75% {
     transform: translateX(-1px) rotate(-0.5deg);
   }
@@ -467,7 +497,8 @@ body::before {
 /* IMPROVED FIRE-LIKE PARTICLES */
 .floating-particle {
   position: absolute;
-  width: 8px; /* Increased from 4px */
+  width: 8px;
+  /* Increased from 4px */
   height: 8px;
   background: radial-gradient(circle, #ff6b35, #f7931e, #ffd700);
   border-radius: 50%;
@@ -515,18 +546,22 @@ body::before {
     transform: translateY(0px) translateX(0px) scale(1);
     opacity: 0.3;
   }
+
   25% {
     transform: translateY(-40px) translateX(15px) scale(1.3);
     opacity: 0.8;
   }
+
   50% {
     transform: translateY(-20px) translateX(-10px) scale(0.9);
     opacity: 0.6;
   }
+
   75% {
     transform: translateY(-60px) translateX(20px) scale(1.1);
     opacity: 0.9;
   }
+
   100% {
     transform: translateY(-80px) translateX(-5px) scale(0.7);
     opacity: 0.2;
@@ -567,6 +602,7 @@ body::before {
   0% {
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
   }
+
   100% {
     text-shadow: 0 0 40px rgba(255, 140, 0, 0.8);
   }
@@ -671,6 +707,7 @@ body::before {
   0% {
     box-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 140, 0, 0.3);
   }
+
   100% {
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.6);
   }
@@ -788,6 +825,7 @@ body::before {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -795,9 +833,11 @@ body::before {
   100% {
     transform: translateX(-50%) translateY(0);
   }
+
   40% {
     transform: translateX(-50%) translateY(-10px);
   }
+
   60% {
     transform: translateX(-50%) translateY(-5px);
   }
@@ -827,7 +867,7 @@ section {
 }
 
 /* Different neon colors for each section */
-.badge:nth-child(1){
+.badge:nth-child(1) {
   /* Our Team */
   background: linear-gradient(135deg, #ff480073, #ff480093);
   color: white;
@@ -934,6 +974,7 @@ section {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-100% + 100vw));
   }
@@ -1848,7 +1889,8 @@ section {
 
 /* REDUCED PAGE HEADER HEIGHT */
 .page-header {
-  padding: 5rem 2rem 0.5rem; /* Significantly reduced */
+  padding: 5rem 2rem 0.5rem;
+  /* Significantly reduced */
   position: relative;
   z-index: 20;
 }
@@ -1857,7 +1899,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: auto; /* Remove fixed height */
+  min-height: auto;
+  /* Remove fixed height */
 }
 
 /* IMPROVED BACK BUTTON FONT */
@@ -1894,7 +1937,8 @@ section {
 
 /* Events Page - REDUCED SPACING */
 .events-page {
-  padding: 0.5rem 0 6rem; /* Further reduced */
+  padding: 0.5rem 0 6rem;
+  /* Further reduced */
   position: relative;
   z-index: 20;
 }
@@ -1969,7 +2013,8 @@ section {
 
 /* Gallery Page - REDUCED SPACING */
 .gallery-page {
-  padding: 0.5rem 0 6rem; /* Further reduced */
+  padding: 0.5rem 0 6rem;
+  /* Further reduced */
   position: relative;
   z-index: 20;
 }
@@ -2096,7 +2141,8 @@ section {
 
 /* Performances Page - REDUCED SPACING */
 .performances-page {
-  padding: 0.5rem 0 6rem; /* Further reduced */
+  padding: 0.5rem 0 6rem;
+  /* Further reduced */
   position: relative;
   z-index: 20;
 }
@@ -2237,6 +2283,28 @@ section {
   animation: none;
   transform: translateY(-3px) scale(1.05);
 }
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 /* SCROLL ANIMATIONS - SLIDE UP FADE UP TRANSITIONS */
 .slide-up-fade {

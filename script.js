@@ -3,6 +3,17 @@ const cursorDot = document.querySelector(".cursor-dot")
 const cursorRing = document.querySelector(".cursor-ring")
 const cursorGlow = document.querySelector(".cursor-glow")
 
+const loadingVideo = document.getElementById("loading-video");
+const loadingScreen = document.getElementById("loading-screen");
+const mainContent = document.getElementById("main-content");
+
+// When video ends, hide loading screen and show main content
+loadingVideo.addEventListener("ended", () => {
+  loadingScreen.style.display = "none";
+  mainContent.style.display = "block";
+});
+
+
 let mouseX = 0
 let mouseY = 0
 let ringX = 0
@@ -34,6 +45,8 @@ function updateCursor() {
 
   requestAnimationFrame(updateCursor)
 }
+
+
 
 updateCursor()
 
@@ -279,39 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
-// Contact form handling
-const contactForm = document.getElementById("contactForm")
-if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault()
 
-    const formData = new FormData(this)
-    const name = formData.get("name")
-    const email = formData.get("email")
-    const subject = formData.get("subject")
-    const message = formData.get("message")
-
-    // Create mailto link
-    const mailtoLink = `mailto:soadramaticsclub@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`
-
-    // Open email client
-    window.location.href = mailtoLink
-
-    // Show success message
-    const formStatus = document.getElementById("formStatus")
-    formStatus.style.display = "block"
-    formStatus.className = "form-status success"
-    formStatus.textContent = "Email client opened! Please send the email to complete your message."
-
-    // Reset form
-    this.reset()
-
-    // Hide status after 5 seconds
-    setTimeout(() => {
-      formStatus.style.display = "none"
-    }, 5000)
-  })
-}
 
 // Lightbox functionality for gallery
 function openLightbox(imageSrc, title, description) {
