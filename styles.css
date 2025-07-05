@@ -1167,7 +1167,7 @@ section {
 
 .event-image {
   position: relative;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
   z-index: 10;
 }
