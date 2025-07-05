@@ -7,12 +7,23 @@ const loadingVideo = document.getElementById("loading-video");
 const loadingScreen = document.getElementById("loading-screen");
 const mainContent = document.getElementById("main-content");
 
-// When video ends, hide loading screen and show main content
-loadingVideo.addEventListener("ended", () => {
-  loadingScreen.style.display = "none";
-  mainContent.style.display = "block";
-});
+// Check if loading screen exists
+if (loadingVideo && loadingScreen) {
+  // When the video ends, hide the loading screen and show main content
+  loadingVideo.addEventListener("ended", () => {
+    loadingScreen.style.display = "none";
+    if (mainContent) mainContent.style.display = "block";
+  });
 
+  // Optional: fallback to force hide after 5 seconds if "ended" never fires
+  setTimeout(() => {
+    loadingScreen.style.display = "none";
+    if (mainContent) mainContent.style.display = "block";
+  }, 5000); // just in case video doesn't play or ends too early
+} else {
+  // If no loading screen, just show main content immediately
+  if (mainContent) mainContent.style.display = "block";
+}
 
 let mouseX = 0
 let mouseY = 0
@@ -189,14 +200,14 @@ function animateCounter(element, target, duration = 2000) {
     }
 
     // Handle different number formats
-    if (target >= 1000) {
-      element.textContent = Math.floor(current / 1000) + "k+"
+    if (target === 3000) {
+      element.textContent = Math.floor(current) + "+"
     } else if (target === 4.9) {
       element.textContent = current.toFixed(1) + "/5"
     } else if (target === 98) {
       element.textContent = Math.floor(current) + "%"
     } else if (target === 75) {
-      element.textContent = Math.floor(current) + "k+"
+      element.textContent = Math.floor(current) + "+"
     } else {
       element.textContent = Math.floor(current) + "+"
     }
@@ -414,4 +425,67 @@ window.addEventListener("scroll", () => {
   })
 })
 
+
+const carousel = document.getElementById('teamCarouselWrapper');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener('mousedown', (e) => {
+  isDown = true;
+  carousel.classList.add('dragging');
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('mouseleave', () => {
+  isDown = false;
+  carousel.classList.remove('dragging');
+});
+
+carousel.addEventListener('mouseup', () => {
+  isDown = false;
+  carousel.classList.remove('dragging');
+});
+
+carousel.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 2; // scroll speed
+  carousel.scrollLeft = scrollLeft - walk;
+});
+
+// Touch support
+let touchStartX = 0;
+carousel.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].clientX;
+  scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('touchmove', (e) => {
+  const x = e.touches[0].clientX;
+  const walk = (x - touchStartX) * 2;
+  carousel.scrollLeft = scrollLeft - walk;
+});
+
+let isUserScrolling = false;
+
+const autoScroll = () => {
+  if (!isUserScrolling) {
+    carousel.scrollLeft += 1;
+    if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+      carousel.scrollLeft = 0;
+    }
+  }
+  requestAnimationFrame(autoScroll);
+};
+
+carousel.addEventListener('mousedown', () => isUserScrolling = true);
+carousel.addEventListener('mouseup', () => setTimeout(() => isUserScrolling = false, 1000));
+carousel.addEventListener('touchstart', () => isUserScrolling = true);
+carousel.addEventListener('touchend', () => setTimeout(() => isUserScrolling = false, 1000));
+
+autoScroll();
 console.log("🎭 TONEELSTUK - Website Loaded Successfully! 🎭")

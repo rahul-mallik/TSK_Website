@@ -576,6 +576,26 @@ body::before {
   padding: 0 2rem;
 }
 
+.logo-img {
+  height: 50px;
+  filter: drop-shadow(0 0 8px #ffd90094); /* Base permanent glow */
+  animation: glow-image 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow-image {
+  0% {
+    /* Keep base glow + subtle extra glow */
+    filter: drop-shadow(0 0 8px #ffd700) drop-shadow(0 0 2px #ffd9006e);
+  }
+  100% {
+    /* Glow expands */
+    filter: drop-shadow(0 0 18px #ff8c00) drop-shadow(0 0 6px #ff8c00);
+  }
+}
+
+
+
+
 /* UPDATED HERO TITLE */
 .hero-title {
   font-size: clamp(3rem, 8vw, 6rem);
@@ -596,6 +616,7 @@ body::before {
   color: #00ffff;
   text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
   letter-spacing: 1px;
+  
 }
 
 @keyframes glow-text {
@@ -867,7 +888,7 @@ section {
 }
 
 /* Different neon colors for each section */
-.badge:nth-child(1) {
+.badge1 {
   /* Our Team */
   background: linear-gradient(135deg, #ff480073, #ff480093);
   color: white;
@@ -875,36 +896,36 @@ section {
   box-shadow: 0 0 20px rgba(255, 94, 0, 0.5);
 }
 
-.badge:nth-child(2) {
+.badge2 {
   /* Upcoming Events */
-  background: linear-gradient(135deg, #00ff88, #00e676);
+  background: linear-gradient(135deg, #00ff886f, #00e6778d);
   color: white;
   border-color: #00ff88;
   box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
 }
 
-.badge:nth-of-type(3) {
+.badge3 {
   /* Gallery */
-  background: linear-gradient(135deg, #8c00ff, #9c27b0);
+  background: linear-gradient(135deg, #8c00ff72, #9b27b078);
   color: white;
   border-color: #8c00ff;
   box-shadow: 0 0 20px rgba(140, 0, 255, 0.5);
 }
 
-.badge:nth-of-type(4) {
+.badge4 {
   /* Testimonials */
-  background: linear-gradient(135deg, #ff4400, #ff5722);
+  background: linear-gradient(135deg, #ee00ff7d, #ff22f080);
   color: white;
-  border-color: #ff4400;
-  box-shadow: 0 0 20px rgba(255, 68, 0, 0.5);
+  border-color: #ff00d9;
+  box-shadow: 0 0 20px rgba(255, 0, 166, 0.5);
 }
 
-.badge:nth-of-type(5) {
+.badge5 {
   /* Get In Touch */
-  background: linear-gradient(135deg, #00bfff, #2196f3);
+  background: linear-gradient(135deg, #fff2007e, #f3db2170);
   color: white;
-  border-color: #00bfff;
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+  border-color: #ffee00;
+  box-shadow: 0 0 20px rgba(238, 255, 0, 0.5);
 }
 
 .section-header h2 {
@@ -949,15 +970,14 @@ section {
   pointer-events: none;
 }
 
-.team-carousel::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(10, 10, 10, 1), transparent);
+#teamCarouselWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
 }
 
-.team-carousel::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(10, 10, 10, 1), transparent);
-}
+
 
 .carousel-track {
   display: flex;
@@ -989,8 +1009,7 @@ section {
 }
 
 .team-card:hover {
-
-  transform: translateY(10px);
+  transform: scale(1.05) translateY(10px);
 }
 
 .team-image {

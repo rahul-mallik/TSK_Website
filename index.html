@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TONEELSTUK - Where Drama Meets Passion</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="toneelstuk.ico" type="image/x-icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -43,9 +44,8 @@
         <!-- Navigation -->
         <nav class="navbar" id="navbar">
             <div class="nav-container">
-                <div class="nav-logo" data-cursor-hover>
-                    <div class="main-title">TONEELSTUK</div>
-                    <div class="subtitle">The Stage Piece</div>
+                <div class="nav-logo logo-container" data-cursor-hover>
+                    <img src="toneelstuk.png" alt="TONEELSTUK Logo" class="hero-title logo-img" />
                 </div>
 
                 <div class="nav-menu" id="navMenu">
@@ -100,15 +100,15 @@
 
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-number" data-count="75">0</div>
+                        <div class="stat-number visible" data-count="75">75+</div>
                         <div class="stat-label">Performances</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number" data-count="3000">0</div>
+                        <div class="stat-number" data-count="3000">3000</div>
                         <div class="stat-label">Members</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number" data-count="10">0</div>
+                        <div class="stat-number" data-count="10">10+</div>
                         <div class="stat-label">Years</div>
                     </div>
                 </div>
@@ -123,162 +123,169 @@
         <section id="about" class="about">
             <div class="container">
                 <div class="section-header">
-                    <span class="badge">Our Team</span>
+                    <span class="badge badge1">Our Team</span>
                     <h2>Meet Our Coordinators</h2>
                     <p>The passionate individuals who bring TONEELSTUK to life through their dedication, creativity, and
                         love for theatrical arts.</p>
                 </div>
 
                 <!-- Team Carousel -->
-                <div class="team-carousel">
-                    <div class="carousel-track" id="teamCarousel">
-                        <div class="team-card metallic-card">
-                            <div class="metallic-shine"></div>
-                            <div class="team-image">
-                                <img src="2.png" alt="Nikhilesh">
-                            </div>
-                            <div class="team-info">
-                                <h3>Nikhilesh Panda</h3>
-                                <p class="role">Society Head </p>
-                                <p class="description">Leading our creative vision with over 8 years of theatrical
-                                    experience. Passionate about innovative storytelling and community building.</p>
-                                <div class="social-links">
-                                    <a href="https://wa.me/919876543210" target="_blank" data-cursor-hover
-                                        class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="https://linkedin.com/in/arjunsharma" target="_blank" data-cursor-hover
-                                        class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://instagram.com/arjun_drama" target="_blank" data-cursor-hover
-                                        class="instagram-link"><i class="fab fa-instagram"></i></a>
+                <div class="team-carousel" id="teamCarouselWrapper">
+                    <div class="team-carousel">
+                        <div class="carousel-track" id="teamCarousel">
+                            <div class="team-card metallic-card">
+                                <div class="metallic-shine"></div>
+                                <div class="team-image">
+                                    <img src="2.png" alt="Nikhilesh">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Nikhilesh Panda</h3>
+                                    <p class="role">Society Head </p>
+                                    <p class="description">Leading our creative vision with over 8 years of theatrical
+                                        experience. Passionate about innovative storytelling and community building.</p>
+                                    <div class="social-links">
+                                        <a href="https://wa.me/919876543210" target="_blank" data-cursor-hover
+                                            class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://linkedin.com/in/arjunsharma" target="_blank" data-cursor-hover
+                                            class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://instagram.com/arjun_drama" target="_blank" data-cursor-hover
+                                            class="instagram-link"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="team-card metallic-card">
-                            <div class="metallic-shine"></div>
-                            <div class="team-image">
-                                <img src="4.png" alt="Pragyan Paramita">
-                            </div>
-                            <div class="team-info">
-                                <h3>Pragyan Paramita</h3>
-                                <p class="role">Artistic Manager & Actor</p>
-                                <p class="description">Award-winning scriptwriter specializing in contemporary
-                                    adaptations.
-                                    Brings fresh perspectives to classic theatrical works.</p>
-                                <div class="social-links">
-                                    <a href="https://wa.me/918765432109" target="_blank" data-cursor-hover
-                                        class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="https://linkedin.com/in/priyapatel" target="_blank" data-cursor-hover
-                                        class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://instagram.com/priya_writes" target="_blank" data-cursor-hover
-                                        class="instagram-link"><i class="fab fa-instagram"></i></a>
+                            <div class="team-card metallic-card">
+                                <div class="metallic-shine"></div>
+                                <div class="team-image">
+                                    <img src="4.png" alt="Pragyan Paramita">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Pragyan Paramita</h3>
+                                    <p class="role">Artistic Manager & Actor</p>
+                                    <p class="description">Award-winning scriptwriter specializing in contemporary
+                                        adaptations.
+                                        Brings fresh perspectives to classic theatrical works.</p>
+                                    <div class="social-links">
+                                        <a href="https://wa.me/918765432109" target="_blank" data-cursor-hover
+                                            class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://linkedin.com/in/priyapatel" target="_blank" data-cursor-hover
+                                            class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://instagram.com/priya_writes" target="_blank" data-cursor-hover
+                                            class="instagram-link"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="team-card metallic-card">
-                            <div class="metallic-shine"></div>
-                            <div class="team-image">
-                                <img src="5.png" alt="Rahul Mallik">
-                            </div>
-                            <div class="team-info">
-                                <h3>Rahul Mallik</h3>
-                                <p class="role">Media Manager & Technical Head</p>
-                                <p class="description">Technical mastermind behind our productions. Expert in lighting,
-                                    sound design, and stage management with 6+ years experience.</p>
-                                <div class="social-links">
-                                    <a href="https://wa.me/917654321098" target="_blank" data-cursor-hover
-                                        class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="https://linkedin.com/in/rahulkumar" target="_blank" data-cursor-hover
-                                        class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://instagram.com/rahul_tech" target="_blank" data-cursor-hover
-                                        class="instagram-link"><i class="fab fa-instagram"></i></a>
+                            <div class="team-card metallic-card">
+                                <div class="metallic-shine"></div>
+                                <div class="team-image">
+                                    <img src="5.png" alt="Rahul Mallik">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Rahul Mallik</h3>
+                                    <p class="role">Media Manager & Technical Head</p>
+                                    <p class="description">Technical mastermind behind our productions. Expert in
+                                        lighting,
+                                        sound design, and stage management with 6+ years experience.</p>
+                                    <div class="social-links">
+                                        <a href="https://wa.me/917654321098" target="_blank" data-cursor-hover
+                                            class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://linkedin.com/in/rahulkumar" target="_blank" data-cursor-hover
+                                            class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://instagram.com/rahul_tech" target="_blank" data-cursor-hover
+                                            class="instagram-link"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="team-card metallic-card">
-                            <div class="metallic-shine"></div>
-                            <div class="team-image">
-                                <img src="1.png" alt="Ajay  Kumbhkar">
-                            </div>
-                            <div class="team-info">
-                                <h3>Ajay Kumbhkar</h3>
-                                <p class="role">Public Relation & Outreach Manager</p>
-                                <p class="description">Creative genius behind our visual aesthetics. Transforms actors
-                                    into
-                                    characters through innovative costume and makeup design.</p>
-                                <div class="social-links">
-                                    <a href="https://wa.me/916543210987" target="_blank" data-cursor-hover
-                                        class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="https://linkedin.com/in/snehagupta" target="_blank" data-cursor-hover
-                                        class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://instagram.com/sneha_designs" target="_blank" data-cursor-hover
-                                        class="instagram-link"><i class="fab fa-instagram"></i></a>
+                            <div class="team-card metallic-card">
+                                <div class="metallic-shine"></div>
+                                <div class="team-image">
+                                    <img src="1.png" alt="Ajay  Kumbhkar">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Ajay Kumbhkar</h3>
+                                    <p class="role">Public Relation & Outreach Manager</p>
+                                    <p class="description">Creative genius behind our visual aesthetics. Transforms
+                                        actors
+                                        into
+                                        characters through innovative costume and makeup design.</p>
+                                    <div class="social-links">
+                                        <a href="https://wa.me/916543210987" target="_blank" data-cursor-hover
+                                            class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://linkedin.com/in/snehagupta" target="_blank" data-cursor-hover
+                                            class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://instagram.com/sneha_designs" target="_blank" data-cursor-hover
+                                            class="instagram-link"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="team-card metallic-card">
-                            <div class="metallic-shine"></div>
-                            <div class="team-image">
-                                <img src="3.png" alt="Ansuji Dalei">
-                            </div>
-                            <div class="team-info">
-                                <h3>Ansuji Dalei</h3>
-                                <p class="role">Production Manager</p>
-                                <p class="description">Composer and sound engineer creating immersive audio experiences.
-                                    Blends traditional and modern musical elements.</p>
-                                <div class="social-links">
-                                    <a href="https://wa.me/915432109876" target="_blank" data-cursor-hover
-                                        class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="https://linkedin.com/in/vikramsingh" target="_blank" data-cursor-hover
-                                        class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://instagram.com/vikram_music" target="_blank" data-cursor-hover
-                                        class="instagram-link"><i class="fab fa-instagram"></i></a>
+                            <div class="team-card metallic-card">
+                                <div class="metallic-shine"></div>
+                                <div class="team-image">
+                                    <img src="3.png" alt="Ansuji Dalei">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Ansuji Dalei</h3>
+                                    <p class="role">Production Manager</p>
+                                    <p class="description">Composer and sound engineer creating immersive audio
+                                        experiences.
+                                        Blends traditional and modern musical elements.</p>
+                                    <div class="social-links">
+                                        <a href="https://wa.me/915432109876" target="_blank" data-cursor-hover
+                                            class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://linkedin.com/in/vikramsingh" target="_blank" data-cursor-hover
+                                            class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://instagram.com/vikram_music" target="_blank" data-cursor-hover
+                                            class="instagram-link"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="team-card metallic-card">
-                            <div class="metallic-shine"></div>
-                            <div class="team-image">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&crop=face"
-                                    alt="Shubham Mohanty">
-                            </div>
-                            <div class="team-info">
-                                <h3>Shubham Mohanty</h3>
-                                <p class="role">Director</p>
-                                <p class="description">Strategic marketing professional expanding our community reach.
-                                    Expert in digital marketing and audience engagement.</p>
-                                <div class="social-links">
-                                    <a href="https://wa.me/914321098765" target="_blank" data-cursor-hover
-                                        class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="https://linkedin.com/in/mayareddy" target="_blank" data-cursor-hover
-                                        class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://instagram.com/maya_marketing" target="_blank" data-cursor-hover
-                                        class="instagram-link"><i class="fab fa-instagram"></i></a>
+                            <div class="team-card metallic-card">
+                                <div class="metallic-shine"></div>
+                                <div class="team-image">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&crop=face"
+                                        alt="Shubham Mohanty">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Shubham Mohanty</h3>
+                                    <p class="role">Director</p>
+                                    <p class="description">Strategic marketing professional expanding our community
+                                        reach.
+                                        Expert in digital marketing and audience engagement.</p>
+                                    <div class="social-links">
+                                        <a href="https://wa.me/914321098765" target="_blank" data-cursor-hover
+                                            class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://linkedin.com/in/mayareddy" target="_blank" data-cursor-hover
+                                            class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://instagram.com/maya_marketing" target="_blank" data-cursor-hover
+                                            class="instagram-link"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="team-card metallic-card">
-                            <div class="metallic-shine"></div>
-                            <div class="team-image">
-                                <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=300&h=300&fit=crop&crop=face"
-                                    alt="Karan Joshi">
-                            </div>
-                            <div class="team-info">
-                                <h3>Karan Joshi</h3>
-                                <p class="role">Workshop Coordinator</p>
-                                <p class="description">Experienced actor and teacher conducting workshops for aspiring
-                                    performers. Specializes in method acting and improvisation.</p>
-                                <div class="social-links">
-                                    <a href="https://wa.me/913210987654" target="_blank" data-cursor-hover
-                                        class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
-                                    <a href="https://linkedin.com/in/karanjoshi" target="_blank" data-cursor-hover
-                                        class="linkedin-link"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://instagram.com/karan_actor" target="_blank" data-cursor-hover
-                                        class="instagram-link"><i class="fab fa-instagram"></i></a>
+                            <div class="team-card metallic-card">
+                                <div class="metallic-shine"></div>
+                                <div class="team-image">
+                                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=300&h=300&fit=crop&crop=face"
+                                        alt="Karan Joshi">
+                                </div>
+                                <div class="team-info">
+                                    <h3>Karan Joshi</h3>
+                                    <p class="role">Workshop Coordinator</p>
+                                    <p class="description">Experienced actor and teacher conducting workshops for
+                                        aspiring
+                                        performers. Specializes in method acting and improvisation.</p>
+                                    <div class="social-links">
+                                        <a href="https://wa.me/913210987654" target="_blank" data-cursor-hover
+                                            class="whatsapp-link"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://linkedin.com/in/karanjoshi" target="_blank" data-cursor-hover
+                                            class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                                        <a href="https://instagram.com/karan_actor" target="_blank" data-cursor-hover
+                                            class="instagram-link"><i class="fab fa-instagram"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +319,7 @@
         <section id="events" class="events">
             <div class="container">
                 <div class="section-header">
-                    <span class="badge">Upcoming Events</span>
+                    <span class="badge badge2">Upcoming Events</span>
                     <h2>Experience Live</h2>
                     <p>Discover our upcoming performances, workshops, and special events. Each show is crafted to
                         deliver an
@@ -435,7 +442,7 @@
         <section id="gallery" class="gallery">
             <div class="container">
                 <div class="section-header">
-                    <span class="badge">Gallery</span>
+                    <span class="badge badge3">Gallery</span>
                     <h2>Visual Stories</h2>
                     <p>Explore moments captured from our performances, behind-the-scenes content, and the creative
                         process
@@ -535,7 +542,7 @@
         <section class="testimonials">
             <div class="container">
                 <div class="section-header">
-                    <span class="badge">Testimonials</span>
+                    <span class="badge badge4">Testimonials</span>
                     <h2>What People Say</h2>
                     <p>Hear from critics, artists, and audiences who have experienced the magic of TONEELSTUK
                         performances.
@@ -645,7 +652,7 @@
         <section id="contact" class="contact">
             <div class="container">
                 <div class="section-header">
-                    <span class="badge">Get In Touch</span>
+                    <span class="badge badge5">Get In Touch</span>
                     <h2>Contact Us</h2>
                     <p>Ready to be part of our theatrical journey? We'd love to hear from you. Reach out for bookings,
                         collaborations, or just to say hello.</p>
@@ -731,7 +738,8 @@
                 <div class="footer-content">
                     <div class="footer-brand">
                         <h3>Toneelstuk</h3>
-                        <p>Redefining theatrical arts through innovation, creativity, and unforgettable experiences.</p>
+                        <p>SOA Dramatics Society <br>Redefining theatrical arts through innovation, creativity, and
+                            unforgettable experiences.</p>
                     </div>
 
                     <div class="footer-links">
@@ -821,6 +829,7 @@
                 });
         });
     </script>
+
 
 
 </body>
